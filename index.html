@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>        
+
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div  id="box">
+
+             <div id="mainBox">
+                <div id="bglogo"><img src="http://i1.piimg.com/1949/b3e9286c9f8a0b3a.jpg"></div>
+                <div class="context">
+                    <h3>People</h3>
+                    <p>Easiest way to be linked</p>
+                </div>    
+                <div id="button">
+                    <div id="butBox">
+                        <span><a id="gotoSign">Sign In</a></span>
+                        <span><a id="gotoLogin">login</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loginBox" hidden>
+                <a href=""><img src="http://i4.buimg.com/1949/110db9209e54ed5c.jpg"></a>
+                <div class="context">
+                    <h3>People</h3>
+                    <p>Hello there!Welcome Back</p>
+                </div> 
+                <section>
+                    <form name="login" action="/login" method="post">
+                        <div id="loginEamil">
+                            <label>
+                                <input type="text" name="email" placeholder="Email Address">
+                            </label>
+                        </div>           
+                        <div id="loginPassword">
+                            <label>
+                                <input type="password" name="password" placeholder="Password">
+                            </label>
+                        </div>
+                        <div id="loginForgot"><a id="fotbtn" href="resetPassword.html">Forgot your password</a></div>           
+                        <div id="login">
+                            <input class="btn" type="submit" value="Login">
+                        </div>
+                    </form>
+                </section>
+                <div id="loginBottom">
+                    <span>Don't have an account?<a href="sign-demo.html"> Sign In</a></span>
+                </div>
+
+            </div>
+            <div id="signBox" hidden>            
+                <a href="login2.html">
+                <img src="http://i4.buimg.com/1949/110db9209e54ed5c.jpg"></a>
+                <div class="context">
+                    <h3>People</h3>
+                    <p>Hello there!Welcome Back</p>
+                </div> 
+                <section>
+                    <form name="signUp" action="/signUp" method="post">
+                        <div>
+                            <label>
+                                <input type="text" name="email" placeholder="Email Address">
+                                <p class="error email_error"></p>
+                            </label>                      
+                        </div>           
+                        <div>
+                            <label>
+                                <input type="password" name="password" placeholder="Password">
+                                <P class="error password_error"></P>
+                            </label>
+                            
+                        </div>            
+                        <div>
+                            <label>
+                                <input type="password" name="password_confirmation" placeholder="Password Confirmation">
+                                <P class="error password_confirmation_error"></P>
+                            </label>
+                            
+                        </div>            
+                        <div id="sign">
+                            <input class="btn" type="submit" value="Sign In">
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+
+            
+
+        </div>
+    </div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $('#gotoSign').on('click',(e)=>{
+            $('#mainBox').attr('hidden','true')
+            $('#loginBox').attr('hidden','true')
+            $('#signBox').removeAttr('hidden')
+        })
+        $('#gotoLogin').on('click',(e)=>{
+            $('#mainBox').attr('hidden','true')
+            $('#signBox').attr('hidden','true')
+            $('#loginBox').removeAttr('hidden')
+        })
+        
+    </script>
+</body>
+</html>
